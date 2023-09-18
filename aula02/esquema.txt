@@ -1,0 +1,15 @@
+Entidades / Tabelas
+- palpaveis
+
+    - professor
+    - aluno
+    - laboratorio
+        - id (PK primary key)
+        - nome (string)
+        - capacidade (int)
+        - cor (string)
+
+- nao palpaveis
+    - curso
+    - turma
+    - disciplina

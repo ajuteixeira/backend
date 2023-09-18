@@ -1,0 +1,11 @@
+<Card>
+    <Numero>1234 1234 1234 1234</Numero>
+    <CVV>123</CVV>
+    <Validade>12/31</Validade>
+    <Titular>FRANCISCO A F SILVA</Titular>
+    <CPF>123.123.123-12</CPF>
+    <Telefones>
+        <Telefone1>85 9123-1234</Telefone1>
+        <Telefone1>85 9123-1234</Telefone1>
+    </Telefones>
+</Card>
