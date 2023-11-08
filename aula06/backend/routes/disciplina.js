@@ -8,6 +8,25 @@ router.get('/disciplinas', async (req, res) => {
     res.send(dados);
 });
 
+// GET /disciplinas/3
+router.get('/disciplinas/:id', async (req, res) => {
+    let dados = await database.execute(`
+    SELECT * FROM tb_disciplina WHERE id=${req.params.id}
+    `);
+
+    res.send(dados[0]);
+});
+
+router.patch('/disciplinas/:id', async (req, res) => {
+    await database.execute(`
+    UPDATE tb_disciplina
+    SET nome='${req.body.nome}', carga_horaria='${req.body.carga_horaria}'
+    WHERE id=${req.params.id}
+    `);
+
+    res.send(req.body);
+});
+
 router.post('/disciplinas', async (req, res) => {
     // INSERT INTO tb_disciplina
     let dados = await database.execute(`
